@@ -40,8 +40,9 @@ export class EcwStack extends cdk.Stack {
     this.createScheduledRules()
 
     // Gracefull importer
-    this.gracefullImporter = new EcwGracefullImporter(this, 'ecw-gracefullImporter', {measurementLambdaName: this.measurementLambda.functionName})
-    this.measurementLambda.grantInvoke(this.gracefullImporter.GracefullLambda)
+    // For imports reenable unathorized graceful imports, the following two commands.
+    // this.gracefullImporter = new EcwGracefullImporter(this, 'ecw-gracefullImporter', {measurementLambdaName: this.measurementLambda.functionName})
+    // this.measurementLambda.grantInvoke(this.gracefullImporter.GracefullLambda)
 
   }
 
